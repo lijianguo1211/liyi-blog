@@ -1,2 +1,3 @@
-# liyi-blog
-liyi test laravel blog
+* 安装扩展
+
+1. **composer require --dev barryvdh/laravel-ide-helper**
