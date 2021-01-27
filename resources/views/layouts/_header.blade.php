@@ -1,7 +1,7 @@
 <div class="flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">LiYI</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsJay" aria-controls="navbarsJay" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -10,7 +10,7 @@
                 <ul class="navbar-nav mr-auto">
                     @foreach($headerData as $item)
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">{{ $item['header_name'] }} <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ route('home.header', ['name' => $item['header_url']]) }}">{{ $item['header_name'] }} <span class="sr-only">(current)</span></a>
                         </li>
                     @endforeach
                 </ul>

@@ -9,16 +9,13 @@
 
 namespace App\View\Composers;
 
-use App\Service\HeaderService;
 use Illuminate\View\View;
 
 class Header
 {
     public function compose(View $view)
     {
-        $service = new HeaderService();
-
-        $headerData = $service->getList();
+        $headerData = app('header')->getList();
 
         $view->with(compact('headerData'));
     }

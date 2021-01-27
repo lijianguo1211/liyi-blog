@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //定制服务
+        App\Providers\MadeServiceProvider::class,
+
     ],
 
     /*

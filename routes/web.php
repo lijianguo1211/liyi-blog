@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    \Log::info('123');
-    return view('welcome');
-});
 
 Route::get('test', 'App\Http\Controllers\TestController@test');
 Route::get('index', 'App\Http\Controllers\TestController@index');
+
+Route::namespace('App\Http\Controllers')->as('home.')->group(function ($group) {
+
+    $group->get('/', 'IndexController@index')->name('index');
+
+    $group->get('{name}', 'HeaderTypeController@index')->name('header');
+});
