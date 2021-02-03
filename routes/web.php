@@ -20,6 +20,8 @@ Route::get('index', 'App\Http\Controllers\TestController@index');
 Route::namespace('App\Http\Controllers')->as('home.')->group(function ($group) {
 
     $group->get('/', 'IndexController@index')->name('index');
+    $group->get('search', 'SearchController@index')->name('search');
 
-    $group->get('{name}', 'HeaderTypeController@index')->name('header');
+    $group->get('/images', 'ImageController@index')->name('image');
+    $group->get('/{name}', 'HeaderTypeController@index')->name('header');
 });

@@ -63,6 +63,26 @@ return [
             ]) : [],
         ],
 
+        'test' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => '118.25.19.106',
+            'port' => '3306',
+            'database' => 'jay_blog',
+            'username' => 'liyi',
+            'password' => 'zn8yxLQCpJcElqmK',
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),

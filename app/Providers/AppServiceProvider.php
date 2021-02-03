@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
 
                 $sql = vsprintf($queryLog, $bindings);
 
-                \Log::debug($sql);
+                //\Log::debug($sql);
             });
         }
     }

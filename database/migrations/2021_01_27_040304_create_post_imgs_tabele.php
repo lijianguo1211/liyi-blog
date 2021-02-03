@@ -14,8 +14,8 @@ class CreatePostImgsTabele extends Migration
     public function up()
     {
         Schema::create('post_imgs', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('resources_id')->comment('资源id');
+            $table->integer('img_id')->comment('图片id');
         });
     }
 

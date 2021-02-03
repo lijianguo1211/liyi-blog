@@ -178,6 +178,9 @@ return [
         //定制服务
         App\Providers\MadeServiceProvider::class,
 
+        //汉字转拼音
+        Overtrue\LaravelPinyin\ServiceProvider::class,
+
     ],
 
     /*
@@ -229,7 +232,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Pinyin' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
     ],
 
 ];

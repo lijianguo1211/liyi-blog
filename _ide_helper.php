@@ -14837,6 +14837,135 @@
      
 }
 
+    namespace Overtrue\LaravelPinyin\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class Pinyin {
+                    /**
+         * Convert string to pinyin.
+         *
+         * @param string $string
+         * @param int $option
+         * @return array 
+         * @static 
+         */ 
+        public static function convert($string, $option = 4096)
+        {
+                        /** @var \Overtrue\Pinyin\Pinyin $instance */
+                        return $instance->convert($string, $option);
+        }
+                    /**
+         * Convert string (person name) to pinyin.
+         *
+         * @param string $stringName
+         * @param int $option
+         * @return array 
+         * @static 
+         */ 
+        public static function name($stringName, $option = 16)
+        {
+                        /** @var \Overtrue\Pinyin\Pinyin $instance */
+                        return $instance->name($stringName, $option);
+        }
+                    /**
+         * Return a pinyin permalink from string.
+         *
+         * @param string $string
+         * @param string $delimiter
+         * @param int $option
+         * @return string 
+         * @static 
+         */ 
+        public static function permalink($string, $delimiter = '-', $option = 4096)
+        {
+                        /** @var \Overtrue\Pinyin\Pinyin $instance */
+                        return $instance->permalink($string, $delimiter, $option);
+        }
+                    /**
+         * Return first letters.
+         *
+         * @param string $string
+         * @param string $delimiter
+         * @param int $option
+         * @return string 
+         * @static 
+         */ 
+        public static function abbr($string, $delimiter = '', $option = 4096)
+        {
+                        /** @var \Overtrue\Pinyin\Pinyin $instance */
+                        return $instance->abbr($string, $delimiter, $option);
+        }
+                    /**
+         * Chinese phrase to pinyin.
+         *
+         * @param string $string
+         * @param string $delimiter
+         * @param int $option
+         * @return string 
+         * @static 
+         */ 
+        public static function phrase($string, $delimiter = ' ', $option = 4096)
+        {
+                        /** @var \Overtrue\Pinyin\Pinyin $instance */
+                        return $instance->phrase($string, $delimiter, $option);
+        }
+                    /**
+         * Chinese to pinyin sentence.
+         *
+         * @param string $string
+         * @param string $delimiter
+         * @param int $option
+         * @return string 
+         * @static 
+         */ 
+        public static function sentence($string, $delimiter = ' ', $option = 4)
+        {
+                        /** @var \Overtrue\Pinyin\Pinyin $instance */
+                        return $instance->sentence($string, $delimiter, $option);
+        }
+                    /**
+         * Loader setter.
+         *
+         * @param \Overtrue\Pinyin\DictLoaderInterface $loader
+         * @return \Overtrue\Pinyin\Pinyin 
+         * @static 
+         */ 
+        public static function setLoader($loader)
+        {
+                        /** @var \Overtrue\Pinyin\Pinyin $instance */
+                        return $instance->setLoader($loader);
+        }
+                    /**
+         * Return dict loader,.
+         *
+         * @return \Overtrue\Pinyin\DictLoaderInterface 
+         * @static 
+         */ 
+        public static function getLoader()
+        {
+                        /** @var \Overtrue\Pinyin\Pinyin $instance */
+                        return $instance->getLoader();
+        }
+                    /**
+         * 
+         *
+         * @param int $option
+         * @param int $check
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasOption($option, $check)
+        {
+                        /** @var \Overtrue\Pinyin\Pinyin $instance */
+                        return $instance->hasOption($option, $check);
+        }
+         
+    }
+     
+}
+
     namespace Illuminate\Http { 
             /**
      * 
@@ -18036,6 +18165,7 @@ namespace  {
             class Validator extends \Illuminate\Support\Facades\Validator {}
             class View extends \Illuminate\Support\Facades\View {}
             class Flare extends \Facade\Ignition\Facades\Flare {}
+            class Pinyin extends \Overtrue\LaravelPinyin\Facades\Pinyin {}
      
 }
 

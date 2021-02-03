@@ -34,5 +34,7 @@ try {
     window.$ = window.jQuery = require('jquery');
     //添加bootstrap4
     require('bootstrap');
+    //
+    require('sweetalert');
 } catch (e) {}
 

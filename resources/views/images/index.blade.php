@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>首页</h1>
+<h1>图片分享</h1>
 @endsection

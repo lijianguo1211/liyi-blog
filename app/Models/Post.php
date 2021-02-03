@@ -9,6 +9,13 @@ class Post extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
+    public $fillable = [
+        'post_url',
+        'post_type',
+    ];
+
     public function postDetail()
     {
         return $this->hasOne(PostDetail::class, 'post_id');
