@@ -21,4 +21,5 @@
 
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ mix('js/mouse-events.js') }}"></script>
+@yield('js')
 </html>

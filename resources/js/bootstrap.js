@@ -36,5 +36,7 @@ try {
     require('bootstrap');
     //
     require('sweetalert');
+
+    require('masonry-layout');
 } catch (e) {}
 
